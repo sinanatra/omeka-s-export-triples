@@ -1,3 +1,4 @@
 config/api.ini
 __pycache__/
 output/
+input
