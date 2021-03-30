@@ -2,3 +2,5 @@ config/api.ini
 __pycache__/
 output/
 input
+.DS_Store
+.ipynb_checkpoints
