@@ -16,7 +16,13 @@ Requirements
    * `$ pip install -r requirements.txt`
 1. Open `config/api.ini` and add your Omeka S id, secret and endpoint.
 
-Start
+Import
+----------
+
+1. Use  the jupyter notebooks at `/notebooks` to import data into the Omeka S as JSON-LD instances.
+
+
+Export
 ----------
 
 1. Use `convert.py` to convert data from the Omeka S instance to specific formats. 
@@ -28,10 +34,3 @@ Start
     You can add the parameter `-i` to export only a specific resource:
 
     `$ python convert.py  -t xml -i 1`. 
-
-
-1. Use `import.py` to import data into the Omeka S as JSON-LD
-    
-    You can add the parameter `-f` to specify a single file:
-    
-    `$ python import.py -f G_197_271.xml`.
