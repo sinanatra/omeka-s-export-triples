@@ -46,9 +46,9 @@ g = graph.parse(data=data, format='json-ld')
 if (args.type == 'xml'):
     output_file = g.serialize(format='pretty-xml', indent=4).decode('utf-8')
     output_fileExtension = 'xml'
-if (args.type == 'n3'):
+if (args.type == 'nt'):
     output_file = g.serialize(format='n3', indent=4).decode('utf-8')
-    output_fileExtension = 'n3'
+    output_fileExtension = 'nt'
 if (args.type == 'turtle'):
     output_file = g.serialize(format='turtle', indent=4).decode('utf-8')
     output_fileExtension = 'ttl'
