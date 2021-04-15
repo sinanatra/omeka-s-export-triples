@@ -8,7 +8,7 @@
 
 <http://omeka.localhost:8080/ns/pina/> a owl:Ontology ;
     dcterms:title "pina" ;
-    dcterms:description "A custom ontology for the entries from the "Lipperheidesche Kostümbibliothek" (Lipperheide Costume Library) with approx. 600 paintings and miniatures on the history of fashion and costume from the period 1450-1900." .
+    dcterms:description "A custom ontology for the entries from the Lipperheidesche Kostümbibliothek (Lipperheide Costume Library) with approx. 600 paintings and miniatures on the history of fashion and costume from the period 1450-1900." .
 
 pina:paintingPrecautionaryMeasure a rdf:Property ;
     rdfs:label "Andere Sicherungsmaßnahmen Gemälde - Painting Precautionary Measure" ;
@@ -114,13 +114,13 @@ pina:objectBack a rdf:Property ;
 
 pina:frameImprovementNeeds a rdf:Property ;
     rdfs:label "Sicherungsbedarf - Frame Improvement Needs" ;
-    rdfs:comment "\\"Sicherungsbedarf: anbringen, verbessern, ergänzen - Improvement needs: attach, improve, add\\"" ;
+    rdfs:comment "Sicherungsbedarf: anbringen, verbessern, ergänzen - Improvement needs: attach, improve, ad" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:paintingImprovementNeeds a rdf:Property ;
     rdfs:label "Sicherungsbedarf - Painting Improvement Needs" ;
-    rdfs:comment "\\"Sicherungsbedarf: anbringen, verbessern, ergänzen - Improvement needs: attach, improve, add\\"" ;
+    rdfs:comment "Sicherungsbedarf: anbringen, verbessern, ergänzen - Improvement needs: attach, improve, add" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
@@ -139,5 +139,23 @@ pina:frameSecurityStickers a rdf:Property ;
 pina:signature a rdf:Property ;
     rdfs:label "Signatur - Signature" ;
     rdfs:comment "Information on the editor of the data entry" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+pina:formerInventorynumber a rdf:Property ;
+    rdfs:label "Frühere Inventarnummer - Former inventory number" ;
+    rdfs:comment "Former inventory number" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+pina:documentationOfMovements a rdf:Property ;
+    rdfs:label "Dokumentation der Bewegungen -  Documentation of the movements" ;
+    rdfs:comment "Documentation of the movements" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+pina:documentationOInterventions a rdf:Property ;
+    rdfs:label "Dokumentation der vor-Ort-Maßnahmen -  Documentation of the on-site interventions" ;
+    rdfs:comment "Documentation of the on-site interventions" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
