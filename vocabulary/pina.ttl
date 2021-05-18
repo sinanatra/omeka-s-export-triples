@@ -8,154 +8,154 @@
 
 <http://omeka.localhost:8080/ns/pina/> a owl:Ontology ;
     dcterms:title "pina" ;
-    dcterms:description "A custom ontology for the entries from the Lipperheidesche Kostümbibliothek (Lipperheide Costume Library) with approx. 600 paintings and miniatures on the history of fashion and costume from the period 1450-1900." .
+    dcterms:description "A custom ontology for the entries from the Lipperheidesche Kostümbibliothek (Lipperheide Costume Library) with approx. 600 paintings and miniatures on the history of fashion and costume from the period 1450(1900." .
 
 pina:paintingPrecautionaryMeasure a rdf:Property ;
-    rdfs:label "Andere Sicherungsmaßnahmen Gemälde - Painting Precautionary Measure" ;
+    rdfs:label "Andere Sicherungsmaßnahmen Gemälde (Painting Precautionary Measure)" ;
     rdfs:comment "Additional adhesives and precautionary measures on the painting" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:framePrecautionaryMeasure a rdf:Property ;
-    rdfs:label "Andere Sicherungsmaßnahmen Rahmen - Frame Precautionary Measure" ;
+    rdfs:label "Andere Sicherungsmaßnahmen Rahmen (Frame Precautionary Measure)" ;
     rdfs:comment "Additional adhesives and precautionary measures on the frame" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:paintingRequirementNote a rdf:Property ;
-    rdfs:label "Anmerkung Gemälde Bedarf - Painting Requirement Note" ;
+    rdfs:label "Anmerkung Gemälde Bedarf (Painting Requirement Note)" ;
     rdfs:comment "Notes on restauration  and concervation requirements" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:frameRequirementNote a rdf:Property ;
-    rdfs:label "Anmerkung Rahme Bedarf - Frame Requirement Note" ;
+    rdfs:label "Anmerkung Rahme Bedarf (Frame Requirement Note)" ;
     rdfs:comment "Notes on the restauration and concervation process" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:objectStorage a rdf:Property ;
-    rdfs:label "Art der Lagerung - Type of storage" ;
+    rdfs:label "Art der Lagerung (Type of storage)" ;
     rdfs:comment "Information regarding the storage of the object" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:labelTraces a rdf:Property ;
-    rdfs:label "Etikettspuren - Label Traces" ;
+    rdfs:label "Etikettspuren (Label Traces)" ;
     rdfs:comment "Existence of traces of adhesive tape (former label) on bottom left" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:externalResearchBy a rdf:Property ;
-    rdfs:label "External research -  Externe Forschung" ;
+    rdfs:label "External research  (Externe Forschung)" ;
     rdfs:comment "Information on who conducted external research" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:heraldry a rdf:Property ;
-    rdfs:label "Heraldik - Heraldry" ;
+    rdfs:label "Heraldik (Heraldry)" ;
     rdfs:comment "Information on the heraldry displayed" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:objectHistoricalMeasureOrIntervention a rdf:Property ;
-    rdfs:label "historische Maßnahmen/Eingriffe -  historical Measures/Interventions" ;
+    rdfs:label "historische Maßnahmen/Eingriffe  (historical Measures/Interventions)" ;
     rdfs:comment "Information on past conservation or restoration interventions" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:paintingConservationNeeds a rdf:Property ;
-    rdfs:label "Konservierungsbedarf Gemälde - Painting Conservation Needs" ;
+    rdfs:label "Konservierungsbedarf Gemälde (Painting Conservation Needs)" ;
     rdfs:comment "Information regarding the conservation requirements of the painting" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:frameConservationNeeds a rdf:Property ;
-    rdfs:label "Konservierungsbedarf Rahmen - frame conservation requirements" ;
+    rdfs:label "Konservierungsbedarf Rahmen (Frame conservation requirements)" ;
     rdfs:comment "Information regarding the conservation requirements of the frame" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:objectFrameRestauration a rdf:Property ;
-    rdfs:label "Object Frame Restauration" ;
+    rdfs:label "Object Frame Restauration)" ;
     rdfs:comment "Information regarding the condition of the frame" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:objectRestauration a rdf:Property ;
-    rdfs:label "Object Restauration" ;
+    rdfs:label "Object Restauration)" ;
     rdfs:comment "Information regarding the condition of the object" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:orderOfChivalry a rdf:Property ;
-    rdfs:label "Orden und Ehrenzeichen  - Order of chivalry" ;
+    rdfs:label "Orden und Ehrenzeichen (Order of chivalry)" ;
     rdfs:comment "Information on the order of chivalry" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:paintingRestaurationNeeds a rdf:Property ;
-    rdfs:label "Restaurierungsbedarf Gemälde- Painting Restauration Needs" ;
+    rdfs:label "Restaurierungsbedarf Gemälde (Painting Restauration Needs)" ;
     rdfs:comment "Information regarding the restauration requirements of the painting" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:frameRestaurationNeeds a rdf:Property ;
-    rdfs:label "Restaurierungsbedarf Rahmen - frame restauration requirements" ;
+    rdfs:label "Restaurierungsbedarf Rahmen (Frame restauration requirements)" ;
     rdfs:comment "Information regarding the restauration requirements of the frame" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:objectBack a rdf:Property ;
-    rdfs:label "Rückseite - Back of the Object" ;
+    rdfs:label "Rückseite (Back of the Object)" ;
     rdfs:comment "Information regarding the back of the object" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:frameImprovementNeeds a rdf:Property ;
-    rdfs:label "Sicherungsbedarf - Frame Improvement Needs" ;
-    rdfs:comment "Sicherungsbedarf: anbringen, verbessern, ergänzen - Improvement needs: attach, improve, ad" ;
+    rdfs:label "Sicherungsbedarf (Frame Improvement Needs)" ;
+    rdfs:comment "Sicherungsbedarf: anbringen, verbessern, ergänzen (Improvement needs: attach, improve, ad" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:paintingImprovementNeeds a rdf:Property ;
-    rdfs:label "Sicherungsbedarf - Painting Improvement Needs" ;
-    rdfs:comment "Sicherungsbedarf: anbringen, verbessern, ergänzen - Improvement needs: attach, improve, add" ;
+    rdfs:label "Sicherungsbedarf (Painting Improvement Needs)" ;
+    rdfs:comment "Sicherungsbedarf: anbringen, verbessern, ergänzen (Improvement needs: attach, improve, add" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:paintingSecurityStickers a rdf:Property ;
-    rdfs:label "Sicherungsbeklebung Gemälde - Security stickers Painting" ;
+    rdfs:label "Sicherungsbeklebung Gemälde (Painting Security stickers)" ;
     rdfs:comment "Existence of adhesive tape on the painting" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:frameSecurityStickers a rdf:Property ;
-    rdfs:label "Sicherungsbeklebung Rahmen - Security stickers Frame" ;
+    rdfs:label "Sicherungsbeklebung Rahmen (Frame Security stickers)" ;
     rdfs:comment "Existence of adhesive tape on the frame" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:signature a rdf:Property ;
-    rdfs:label "Signatur - Signature" ;
+    rdfs:label "Signatur (Signature)" ;
     rdfs:comment "Information on the editor of the data entry" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:formerInventorynumber a rdf:Property ;
-    rdfs:label "Frühere Inventarnummer - Former inventory number" ;
+    rdfs:label "Frühere Inventarnummer (Former inventory number)" ;
     rdfs:comment "Former inventory number" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 pina:documentationOfMovements a rdf:Property ;
-    rdfs:label "Dokumentation der Bewegungen -  Documentation of the movements" ;
+    rdfs:label "Dokumentation der Bewegungen  (Documentation of the movements)" ;
     rdfs:comment "Documentation of the movements" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-pina:documentationOInterventions a rdf:Property ;
-    rdfs:label "Dokumentation der vor-Ort-Maßnahmen -  Documentation of the on-site interventions" ;
-    rdfs:comment "Documentation of the on-site interventions" ;
+pina:documentationOfInterventions a rdf:Property ;
+    rdfs:label "Dokumentation der vor-Ort-Maßnahmen  (Documentation of the on site interventions)" ;
+    rdfs:comment "Documentation of the on site interventions" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .

@@ -19,11 +19,13 @@ output_fileName = ''
 output_fileExtension =''
 
 if (args.id):
-    resource_url = endpoint + str("/" + str(args.id))
+    resource_url = endpoint + str("items/" + str(args.id))
     output_fileName = "item_" + str(args.id)
 else:
-    resource_url = endpoint + str("/")
+    resource_url = endpoint + str("items/")
     output_fileName = 'all'
+
+print(resource_url)
 
 page = urllib.request.urlopen(resource_url)
 resource_content = page.read().decode('utf-8')
@@ -38,7 +40,7 @@ for element in data:
         continue
 
 data = json.dumps(data)
-data = data.replace('o:label','skos:prefLabel')
+#data = data.replace('o:label','skos:prefLabel')
 
 #print(data)
 g = graph.parse(data=data, format='json-ld')
