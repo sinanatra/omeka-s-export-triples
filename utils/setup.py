@@ -9,5 +9,6 @@ client_secret = config.get('main', 'client_secret')
 endpoint = config.get('main', 'endpoint')
 
 # Connect to Api
-access_url = endpoint+ '?key_identity=' + client_id + '&key_credential=' + client_secret
-print("Connected to:    ", access_url)
+credential = 'key_identity=' + client_id + '&key_credential=' + client_secret
+access_url = endpoint + "?" + credential
+print("Connected to:    ", endpoint)
