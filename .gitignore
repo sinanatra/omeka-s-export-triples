@@ -1,5 +1,6 @@
 config/api.ini
 __pycache__/
+.pyc
 output/
 input
 media
