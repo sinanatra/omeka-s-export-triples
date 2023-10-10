@@ -1,17 +1,14 @@
-# Pina O. Tools 
+# Omeka S export triples
 
-This repository contains a series of scripts which convert the data from Pina O. a cms based on Omeka S, to specific vocabularies structured in XML/RDF and n-triples.
-
-It additionally imports batch of XML data into Pina O. as JSON-LD items. 
-
+This repository contains a series of scripts which convert data from the Omeka S api to XML/RDF, turtle and n-triples.
 
 Requirements
 ----------
 
 1. Clone this repository:
-   * `$ git clone https://github.com/sinanatra/Pina-O-tools`
+   * `$ git clone https://github.com/sinanatra/omeka-s-export-triples`
 1. Change into the specific directory:
-   * `$ cd Pina-O-tools`
+   * `$ cd omeka-s-export-triples`
 1. Perform first-time setup:
    * `$ pip install -r requirements.txt`
 1. Open `config/api.ini` and add your Omeka S id, secret and endpoint.
