@@ -2,6 +2,7 @@ import enum
 from utils.setup import *
 from rdflib import Graph, Literal, Namespace, RDF, URIRef, plugin
 from rdflib.serializer import Serializer
+from rdflib.tools.rdf2dot import rdf2dot
 import argparse
 import urllib.request
 import urllib.parse
@@ -10,15 +11,15 @@ import json
 graph = Graph()
 
 # change the namespace uri
-graph.bind('ecrm', 'http://erlangen-crm.org', replace=True)
-graph.bind('skos', 'http://www.w3.org/2004/02/skos/core#', replace=True)
+# graph.bind('ecrm', 'http://erlangen-crm.org', replace=True)
+# graph.bind('skos', 'http://www.w3.org/2004/02/skos/core#', replace=True)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-i', '--id', help='Resource Id', required=False)
 parser.add_argument('-r', '--related', help='Export Related Items', choices=['true'], required=False)
 parser.add_argument('-m', '--media', help='Media Id', required=False)
 parser.add_argument('-t', '--type', help='Convert resource to a specific format',
-                    choices=['xml', 'nt', 'turtle'], required=True)
+                    choices=['xml', 'nt', 'n3', 'turtle'], required=True)
 args = parser.parse_args()
 
 output_file = ''
@@ -33,7 +34,7 @@ params = urllib.parse.urlencode({
 if args.id:
     resource_url = endpoint + str("items/" + str(args.id))
     output_fileName = "item_" + str(args.id)
-    data = [json.loads(urllib.request.urlopen(resource_url + params).read().decode('utf-8'))]
+    data = [json.loads(urllib.request.urlopen(resource_url + params).read())]
 
     if args.related:
         for element in data:
@@ -42,7 +43,7 @@ if args.id:
                     for each in element[key]:
                         if 'resource' in each['type']:
                             resource = [json.loads(urllib.request.urlopen(
-                                    each['@id'] + params).read().decode('utf-8'))]
+                                    each['@id'] + params).read())]
                             data = data + resource
                 except:
                     continue
@@ -50,17 +51,17 @@ if args.id:
 elif args.media:
     resource_url = endpoint + str("media/" + str(args.media))
     output_fileName = "media_" + str(args.media)
-    data = [json.loads(urllib.request.urlopen(resource_url + params).read().decode('utf-8'))]
+    data = [json.loads(urllib.request.urlopen(resource_url + params).read())]
 else:
     resource_url = endpoint + str("items?page=all")
     media_url = endpoint + str("media?page=all")
     output_fileName = 'all'
     
     items = json.loads(urllib.request.urlopen(
-        resource_url + params).read().decode('utf-8'))
+        resource_url + params).read())
 
     media = json.loads(urllib.request.urlopen(
-        media_url + params).read().decode('utf-8'))
+        media_url + params).read())
 
     data = items + media
 
@@ -109,21 +110,24 @@ data = data.replace('o:label', 'skos:prefLabel')
 g = graph.parse(data=data, format='json-ld')
 
 if args.type == 'xml':
-    output_file = g.serialize(format='pretty-xml', indent=4).decode('utf-8')
+    output_file = g.serialize(format='pretty-xml', indent=4)
     output_fileExtension = 'xml'
 
 if args.type == 'nt':
-    output_file = g.serialize(format='nt').decode('utf-8')
+    output_file = g.serialize(format='nt')
     output_fileExtension = 'nt'
 
+if args.type == 'n3':
+    output_file = g.serialize(format='n3')
+    output_fileExtension = 'n3'
+
 if args.type == 'turtle':
-    output_file = g.serialize(format='turtle', indent=4).decode('utf-8')
+    output_file = g.serialize(format='turtle', indent=4)
     output_fileExtension = 'ttl'
 
 if output_file != '':
     # change the uri, only for develop
-    output_file = output_file.replace(
-        'http://erlangen-crm.org', 'http://erlangen-crm.org/200717/')
+    output_file = output_file.replace('http://erlangen-crm.org', 'http://erlangen-crm.org/200717/')
 
     f = open("output/" + output_fileName + "." + output_fileExtension, "w")
     f.write(output_file)

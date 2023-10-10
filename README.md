@@ -1,6 +1,6 @@
 # Pina O. Tools 
 
-This repository contains a series of scripts which convert the data from Pina O. a cms based on Omeka S, to specific vocabularies structured in XML/RDF and n-tripless.
+This repository contains a series of scripts which convert the data from Pina O. a cms based on Omeka S, to specific vocabularies structured in XML/RDF and n-triples.
 
 It additionally imports batch of XML data into Pina O. as JSON-LD items. 
 
@@ -15,11 +15,6 @@ Requirements
 1. Perform first-time setup:
    * `$ pip install -r requirements.txt`
 1. Open `config/api.ini` and add your Omeka S id, secret and endpoint.
-
-Import
-----------
-
-1. Use  the jupyter notebooks at `/notebooks` to import data into the Omeka S as JSON-LD instances.
 
 
 Export
